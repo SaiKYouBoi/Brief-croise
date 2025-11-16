@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gryffindor Gather</title>
     <link href="./output.css" rel="stylesheet">
 </head>
+
 <body class="bg-[#FBF9EF] m-0 p-0">
     <div class="grid grid-cols-[1fr_4fr] w-full h-screen">
-        
-        <div class="shadow-[2px_0_10px_-2px_rgba(0,0,0,0.12)] w-full h-screen bg-white p-2">
-            <div class="logo h-[12%] border-b-[1.5px] border-gray-300">
+
+        <div class="shadow-[2px_0_10px_-2px_rgba(0,0,0,0.12)] w-full h-screen bg-white p-2 pt-0">
+            <div class="logo h-auto border-b-[1.5px] border-gray-300 p-2.5">
                 <img class="w-[70%] m-auto h-auto" src="./images/logoimage.png" alt="Gryffindor Gather log">
             </div>
 
             <div class="UnassignedStaff">
-                <h1>Unassigned Staff</h1>
-            </div>
-        </div>  
-        
-        <div class="plan relative">
-            <div class="bg-[url('/images/roomplan.png')] bg-cover bg-center h-[97%] w-[90%] border-4 border-[#1C3A4D] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <h1 class="text-center p-2 text-xl">Unassigned Staff</h1>
 
+            </div>
+        </div>
+
+        <div class="plan relative">
+            <div
+                class="bg-[url('/images/rommplaan.png')] bg-cover bg-center h-[90%] w-[90%] border-4 border-[#1C3A4D] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-22 grid-rows-8 gap-0">
+                <div class="bg-red-500 col-start-1 col-end-9 row-start-1 row-end-4" id="conferenceroom">Div1</div>
+                <div class="bg-green-500 col-start-1 col-end-9 row-start-4 row-end-9 ">Div2</div>
+                <div class="bg-blue-500 col-start-12 col-end-18 row-start-1 row-end-4 " id="reception">Div3</div>
+                <div class="bg-yellow-500 col-start-18 col-end-23 row-start-1 row-end-4">Div4</div>
+                <div class="bg-purple-500 col-start-12 col-end-18 row-start-6 row-end-9">Div5</div>
+                <div class="bg-pink-500 col-start-18 col-end-23 row-start-6 row-end-9">Div6</div>
             </div>
         </div>
 
     </div>
 </body>
+
 </html>
