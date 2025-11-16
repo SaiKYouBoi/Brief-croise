@@ -18,33 +18,85 @@
 
             <div class="UnassignedStaff flex flex-col  items-center gap-2">
                 <h1 class="text-center p-2 text-xl">Unassigned Staff</h1>
-                <button class="bg-emerald-400 hover:bg-emerald-500 text-white w-[90%] rounded-[5px] p-2">Add Employee</button>
+                <button class="bg-emerald-400 hover:bg-emerald-500 text-white w-[90%] rounded-[5px] p-2" id="addemployee">Add
+                    Employee</button>
             </div>
         </div>
 
         <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999">
-            <div class="modal w-[30%] h-[95%] bg-white rounded-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-[30px]">
-                <form id="Employeeform">
-                    <h2 class="text-2xl">Add Employee</h2>
-                    
-                    <label class="block mb-1 mt-3.5" for="name">Name</label>
-                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="name" type="text" placeholder="Enter your name">
-                    
-                    <label class="block mb-1 mt-3.5" for="role">Role</label>
-                    <select class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="roles" id="roles">
-                        <option value=""></option>
-                    </select>
-                    
-                    <label class="block mb-1 mt-3.5" for="url">Photo URL</label>
-                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="url" type="text" placeholder="Enter the url of the photo">
+            <div
+                class="modal w-[30%] h-[95%] bg-white rounded-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 py-6 overflow-hidden flex flex-col">
+                <div class="overflow-auto p-6 py-4 pt-0 flex-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
+            [&::-webkit-scrollbar-thumb]:rounded-full">
+                    <form id="Employeeform">
 
-                    <label class="block mb-1 mt-3.5" for="url">Email</label>
-                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="email" type="text" placeholder="Enter your email">
+                        <h2 class="text-2xl">Add Employee</h2>
 
-                    <label class="block mb-1 mt-3.5" for="url">Phone</label>
-                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="phone" type="text" placeholder="Enter your phone number">
+                        <label class="block mb-1 mt-3.5" for="name">Name</label>
+                        <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="name"
+                            type="text" placeholder="Enter your name">
 
-                </form>
+                        <label class="block mb-1 mt-3.5" for="role">Role</label>
+                        <select class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="roles"
+                            id="roles">
+                            <option value="chose" disabled selected>Select a role</option>
+                            <option value="receptionist">Receptionist</option>
+                            <option value="technician">IT Technician</option>
+                            <option value="securityagent">Security Agent</option>
+                            <option value="manager">Manager</option>
+                            <option value="cleaningstaff">Cleaning Staff</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label class="block mb-1 mt-3.5" for="url">Photo URL</label>
+                        <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="url"
+                            type="text" placeholder="Enter the url of the photo">
+                        <img class="h-25 w-25 object-cover border-gray-400 border-2 border-dashed"
+                            src="./images/anonymous-user.webp" alt="EmployeeImage" id="employeeimage">
+
+                        <label class="block mb-1 mt-3.5" for="email">Email</label>
+                        <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="email"
+                            type="text" placeholder="Enter your email">
+
+                        <label class="block mb-1 mt-3.5" for="phone">Phone</label>
+                        <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="phone"
+                            type="text" placeholder="Enter your phone number">
+
+                        <label class="block mb-1 mt-3.5" for="Experience">Experience</label>
+                        <div id="experiences">
+                        <div class="border border-gray-400 rounded-[11px] p-4 mt-2.5">
+                            <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
+                                name="jobtitle" type="text" placeholder="Job Title">
+                            <input class="border-gray-300  rounded-md mb-2 mt-2.5 border-2 w-full h-[42px] py-2 px-3"
+                                name="Company / Organization" type="text" placeholder="Company / Organization">
+
+                            <div class="flex gap-1.5 mt-2.5">
+                                <div><label class="block mb-1" for="Sdate">Start Date</label>
+                                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                                        name="phone" type="date">
+                                </div>
+                                <div><label class="block mb-1 " for="Edate">End Date</label>
+                                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                                        name="phone" type="date">
+                                </div>
+                            </div>
+                            <textarea class="border-gray-300 rounded-md mt-2.5 border-2 w-full py-2 px-3" rows="2"
+                                name="Description" id="Description" placeholder="Description"></textarea>
+                            <button
+                                class="bg-blue-400 hover:bg-blue-500 text-white w-full mt-2.5 rounded-[5px] p-2" id="addexperience">Add
+                                Another Experience</button>
+                        </div>
+                        </div>
+                        <div class="flex gap-5 mt-5">
+                            <button
+                                class="bg-red-400 hover:bg-red-500 text-white w-full mt-2.5 rounded-[5px] p-2">
+                                Cancel</button>
+                            <button
+                                class="bg-emerald-400 hover:bg-emerald-500 text-white w-full mt-2.5 rounded-[5px] p-2">
+                                Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="plan relative">
@@ -60,6 +112,7 @@
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
