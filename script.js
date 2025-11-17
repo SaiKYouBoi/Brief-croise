@@ -32,7 +32,7 @@ addexperiencebtn.addEventListener("click", (e) => {
   experiencesform.insertAdjacentHTML(
     "beforeend",
     `
-<div class="border border-gray-400 rounded-[11px] p-4 mt-2.5">
+<div class="expform border border-gray-400 rounded-[11px] p-4 mt-2.5">
                             <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
                                 name="jobtitle" type="text" placeholder="Job Title">
                             <input class="border-gray-300  rounded-md mb-2 mt-2.5 border-2 w-full h-[42px] py-2 px-3"
@@ -86,24 +86,27 @@ function displayemployees(infos) {
     `;
   });
 }
-
+    
 displayemployees(emp);
 
-Employeeform.addEventListener("input", (e) => {
+const allexpforms = document.querySelectorAll(".expform")
+
+Employeeform.addEventListener("input", () => {
   
 const nameregex = /^[A-Za-z]{2,}$/;
   const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneregex = /^(?:\+212|0)(6|7)[0-9]{8}$/;
 
-  experiencesform.forEach((exp) => {
-    const allinputs = experiencesform.querySelectorAll("input");
-    const exptextarea = experiencesform.querySelector("textarea");
+  allexpforms.forEach((exp) => {
+    const allinputs = exp.querySelectorAll("input");
+    const exptextarea = exp.querySelectorAll("textarea");
 
     const jobtitle = allinputs[0];
     const company = allinputs[1];
     const startdate = allinputs[2];
     const enddate = allinputs[3];
-
+    
+    
 
   });
 });

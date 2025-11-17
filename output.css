@@ -463,6 +463,9 @@
   .h-\[95\%\] {
     height: 95%;
   }
+  .h-\[100vw\] {
+    height: 100vw;
+  }
   .h-\[120px\] {
     height: 120px;
   }
@@ -535,6 +538,9 @@
   .w-\[90\%\] {
     width: 90%;
   }
+  .w-\[100vh\] {
+    width: 100vh;
+  }
   .w-\[120px\] {
     width: 120px;
   }
@@ -571,6 +577,9 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .origin-top-left {
+    transform-origin: 0 0;
+  }
   .-translate-x-1 {
     --tw-translate-x: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -586,6 +595,9 @@
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .rotate-90 {
+    rotate: 90deg;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -947,6 +959,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-yellow-500) 50%, transparent);
     }
+  }
+  .bg-\[url\(\'\.\/images\/rommplaan\.png\'\)\] {
+    background-image: url('./images/rommplaan.png');
   }
   .bg-\[url\(\'\/images\/rommplaan\.png\'\)\] {
     background-image: url('/images/rommplaan.png');
@@ -1371,6 +1386,21 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
+    }
+  }
+  .md\:h-auto {
+    @media (width >= 48rem) {
+      height: auto;
+    }
+  }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:rotate-0 {
+    @media (width >= 48rem) {
+      rotate: 0deg;
     }
   }
   .lg\:grid-cols-3 {
