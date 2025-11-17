@@ -8,12 +8,12 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-[#FBF9EF] m-0 p-0">
-    <div class="grid grid-cols-[1fr_4fr] w-full h-screen">
+<body class="bg-[#FBF9EF] m-0 p-0 ">
+    <div class="grid xl:grid-cols-[1fr_4fr] w-full h-screen grid-rows-[1fr_1fr]">
 
-        <div class="shadow-[2px_0_10px_-2px_rgba(0,0,0,0.12)] w-full h-screen bg-white p-2 pt-0">
+        <div class="shadow-[2px_0_10px_-2px_rgba(0,0,0,0.12)] w-full xl:h-screen h-full bg-white p-2 pt-0">
             <div class="logo h-auto border-b-[1.5px] border-gray-300 p-2.5">
-                <img class="w-[70%] m-auto h-auto" src="./images/logoimage.png" alt="Gryffindor Gather log">
+                <img class="xl:w-[70%] m-auto h-auto w-[20%]" src="./images/logoimage.png" alt="Gryffindor Gather log">
             </div>
 
             <div class="UnassignedStaff flex flex-col  items-center gap-2">
@@ -49,11 +49,12 @@
             </div>
         </div>
 
+        <!-- modal -->
         <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="addemployeemodal">
             <div
-                class="modal w-[30%] h-[95%] bg-white rounded-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 py-6 overflow-hidden flex flex-col">
+                class="modal w-[95%] xl:w-[30%] h-[95%] bg-white rounded-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 py-6 overflow-hidden flex flex-col">
                 <div class="overflow-auto p-6 py-4 pt-0 flex-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
-            [&::-webkit-scrollbar-thumb]:rounded-full">
+            [&::-webkit-scrollbar-thumb]:rounded-full ">
                     <form id="Employeeform">
 
                         <h2 class="text-2xl">Add Employee</h2>
@@ -130,7 +131,7 @@
         </div>
         <div class="plan relative">
             <div
-                class="bg-[url('./images/rommplaan.png')] bg-cover bg-center h-[95%] w-[90%] border-4 border-[#1C3A4D] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-22 grid-rows-8 gap-0">
+                class="bg-[url('./images/rommplaan.png')] bg-cover bg-no-repeat bg-center h-[95%] xl:w-[90%] w-[96%] border-4 border-[#1C3A4D] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-22 grid-rows-8 gap-0">
                 <div class="bg-red-500/20 col-start-1 col-end-9 row-start-1 row-end-4" id="conferenceroom">CONFERENCE ROOM</div>
                 <div class="bg-green-500/20 col-start-1 col-end-9 row-start-4 row-end-9 " id="reception">RECEPTION</div>
                 <div class="bg-blue-500/20 col-start-12 col-end-18 row-start-1 row-end-4 " id="archivesroom">ARCHIVES ROOM</div>
