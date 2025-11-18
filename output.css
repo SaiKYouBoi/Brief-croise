@@ -229,6 +229,36 @@
   .top-60 {
     top: calc(var(--spacing) * 60);
   }
+  .top-70 {
+    top: calc(var(--spacing) * 70);
+  }
+  .top-99 {
+    top: calc(var(--spacing) * 99);
+  }
+  .top-100 {
+    top: calc(var(--spacing) * 100);
+  }
+  .top-105 {
+    top: calc(var(--spacing) * 105);
+  }
+  .top-110 {
+    top: calc(var(--spacing) * 110);
+  }
+  .top-125 {
+    top: calc(var(--spacing) * 125);
+  }
+  .top-126 {
+    top: calc(var(--spacing) * 126);
+  }
+  .top-127 {
+    top: calc(var(--spacing) * 127);
+  }
+  .top-128 {
+    top: calc(var(--spacing) * 128);
+  }
+  .top-130 {
+    top: calc(var(--spacing) * 130);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
@@ -246,6 +276,9 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .left-2 {
+    left: calc(var(--spacing) * 2);
   }
   .left-26 {
     left: calc(var(--spacing) * 26);
@@ -265,8 +298,44 @@
   .left-46 {
     left: calc(var(--spacing) * 46);
   }
+  .left-90 {
+    left: calc(var(--spacing) * 90);
+  }
+  .left-91 {
+    left: calc(var(--spacing) * 91);
+  }
+  .left-92 {
+    left: calc(var(--spacing) * 92);
+  }
+  .left-100 {
+    left: calc(var(--spacing) * 100);
+  }
+  .left-120 {
+    left: calc(var(--spacing) * 120);
+  }
+  .left-130 {
+    left: calc(var(--spacing) * 130);
+  }
+  .left-135 {
+    left: calc(var(--spacing) * 135);
+  }
+  .left-136 {
+    left: calc(var(--spacing) * 136);
+  }
+  .left-137 {
+    left: calc(var(--spacing) * 137);
+  }
+  .left-140 {
+    left: calc(var(--spacing) * 140);
+  }
   .left-143 {
     left: calc(var(--spacing) * 143);
+  }
+  .left-155 {
+    left: calc(var(--spacing) * 155);
+  }
+  .left-160 {
+    left: calc(var(--spacing) * 160);
   }
   .left-170 {
     left: calc(var(--spacing) * 170);
@@ -279,6 +348,51 @@
   }
   .left-174 {
     left: calc(var(--spacing) * 174);
+  }
+  .left-185 {
+    left: calc(var(--spacing) * 185);
+  }
+  .left-190 {
+    left: calc(var(--spacing) * 190);
+  }
+  .left-200 {
+    left: calc(var(--spacing) * 200);
+  }
+  .left-204 {
+    left: calc(var(--spacing) * 204);
+  }
+  .left-205 {
+    left: calc(var(--spacing) * 205);
+  }
+  .left-210 {
+    left: calc(var(--spacing) * 210);
+  }
+  .left-220 {
+    left: calc(var(--spacing) * 220);
+  }
+  .left-222 {
+    left: calc(var(--spacing) * 222);
+  }
+  .left-228 {
+    left: calc(var(--spacing) * 228);
+  }
+  .left-230 {
+    left: calc(var(--spacing) * 230);
+  }
+  .left-232 {
+    left: calc(var(--spacing) * 232);
+  }
+  .left-233 {
+    left: calc(var(--spacing) * 233);
+  }
+  .left-234 {
+    left: calc(var(--spacing) * 234);
+  }
+  .left-235 {
+    left: calc(var(--spacing) * 235);
+  }
+  .left-240 {
+    left: calc(var(--spacing) * 240);
   }
   .z-999 {
     z-index: 999;
@@ -342,6 +456,9 @@
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
   }
   .block {
     display: block;
@@ -614,8 +731,29 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[\#3F4B56\]\/20 {
+    background-color: color-mix(in oklab, #3F4B56 20%, transparent);
+  }
+  .bg-\[\#3F4B56\]\/80 {
+    background-color: color-mix(in oklab, #3F4B56 80%, transparent);
+  }
+  .bg-\[\#4A5866\]\/80 {
+    background-color: color-mix(in oklab, #4A5866 80%, transparent);
+  }
   .bg-\[\#5BC5AA\] {
     background-color: #5BC5AA;
+  }
+  .bg-\[\#08B6A3\]\/90 {
+    background-color: color-mix(in oklab, #08B6A3 90%, transparent);
+  }
+  .bg-\[\#9FC2CF\]\/90 {
+    background-color: color-mix(in oklab, #9FC2CF 90%, transparent);
+  }
+  .bg-\[\#9FC2CF\]\/93 {
+    background-color: color-mix(in oklab, #9FC2CF 93%, transparent);
+  }
+  .bg-\[\#50B4A9\]\/90 {
+    background-color: color-mix(in oklab, #50B4A9 90%, transparent);
   }
   .bg-\[\#59C3A7\] {
     background-color: #59C3A7;
@@ -632,8 +770,65 @@
   .bg-\[\#59C3A7\]\/90 {
     background-color: color-mix(in oklab, #59C3A7 90%, transparent);
   }
+  .bg-\[\#83AFBF\]\/93 {
+    background-color: color-mix(in oklab, #83AFBF 93%, transparent);
+  }
+  .bg-\[\#424F5B\]\/5 {
+    background-color: color-mix(in oklab, #424F5B 5%, transparent);
+  }
+  .bg-\[\#424F5B\]\/20 {
+    background-color: color-mix(in oklab, #424F5B 20%, transparent);
+  }
+  .bg-\[\#424F5B\]\/80 {
+    background-color: color-mix(in oklab, #424F5B 80%, transparent);
+  }
+  .bg-\[\#424F5B\]\/90 {
+    background-color: color-mix(in oklab, #424F5B 90%, transparent);
+  }
+  .bg-\[\#5187AC\]\/90 {
+    background-color: color-mix(in oklab, #5187AC 90%, transparent);
+  }
+  .bg-\[\#61879B\]\/20 {
+    background-color: color-mix(in oklab, #61879B 20%, transparent);
+  }
+  .bg-\[\#61879B\]\/70 {
+    background-color: color-mix(in oklab, #61879B 70%, transparent);
+  }
+  .bg-\[\#61879B\]\/80 {
+    background-color: color-mix(in oklab, #61879B 80%, transparent);
+  }
+  .bg-\[\#61879B\]\/90 {
+    background-color: color-mix(in oklab, #61879B 90%, transparent);
+  }
+  .bg-\[\#545657\]\/90 {
+    background-color: color-mix(in oklab, #545657 90%, transparent);
+  }
+  .bg-\[\#A2C7D2\]\/93 {
+    background-color: color-mix(in oklab, #A2C7D2 93%, transparent);
+  }
+  .bg-\[\#C2D7DD\]\/93 {
+    background-color: color-mix(in oklab, #C2D7DD 93%, transparent);
+  }
+  .bg-\[\#CB9D7B\]\/93 {
+    background-color: color-mix(in oklab, #CB9D7B 93%, transparent);
+  }
   .bg-\[\#D95F58\]\/90 {
     background-color: color-mix(in oklab, #D95F58 90%, transparent);
+  }
+  .bg-\[\#F4C14F\]\/90 {
+    background-color: color-mix(in oklab, #F4C14F 90%, transparent);
+  }
+  .bg-\[\#F5C251\]\/9 {
+    background-color: color-mix(in oklab, #F5C251 9%, transparent);
+  }
+  .bg-\[\#F5C251\]\/90 {
+    background-color: color-mix(in oklab, #F5C251 90%, transparent);
+  }
+  .bg-\[\#F5C251\]\/93 {
+    background-color: color-mix(in oklab, #F5C251 93%, transparent);
+  }
+  .bg-\[\#F5C251\]\/95 {
+    background-color: color-mix(in oklab, #F5C251 95%, transparent);
   }
   .bg-\[\#FBF9EF\] {
     background-color: #FBF9EF;
@@ -900,6 +1095,13 @@
       }
     }
   }
+  .hover\:bg-\[\#4A5866\]\/90 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #4A5866 90%, transparent);
+      }
+    }
+  }
   .hover\:bg-\[\#4EB097\]\/90 {
     &:hover {
       @media (hover: hover) {
@@ -921,10 +1123,52 @@
       }
     }
   }
+  .hover\:bg-\[\#90B3C0\]\/90 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #90B3C0 90%, transparent);
+      }
+    }
+  }
+  .hover\:bg-\[\#55798C\]\/70 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #55798C 70%, transparent);
+      }
+    }
+  }
+  .hover\:bg-\[\#55798C\]\/80 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #55798C 80%, transparent);
+      }
+    }
+  }
+  .hover\:bg-\[\#55798C\]\/90 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #55798C 90%, transparent);
+      }
+    }
+  }
   .hover\:bg-\[\#C6534C\]\/90 {
     &:hover {
       @media (hover: hover) {
         background-color: color-mix(in oklab, #C6534C 90%, transparent);
+      }
+    }
+  }
+  .hover\:bg-\[\#E0B149\]\/90 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #E0B149 90%, transparent);
+      }
+    }
+  }
+  .hover\:bg-\[\#E0B149\]\/93 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #E0B149 93%, transparent);
       }
     }
   }
