@@ -102,6 +102,8 @@ function displayemployees(infos) {
 
 displayemployees(emp);
 
+
+// validate inputs
 function validate(input, regex) {
   const errorm = input?.nextElementSibling;
   
@@ -122,11 +124,10 @@ function validate(input, regex) {
 }
 
 function validateEmployyeform(){
-
   const name = modal.querySelector("input[name]")
-  const email = modal.querySelector("input[email]")
-  const phone = modal.querySelector("input[phone]")
-
+  const email = modal.querySelector("input[name=email]")
+  const phone = modal.querySelector("input[name=phone]")
+  
   allValid = true
 
   const nameregex = /^[A-Za-z]{6,}$/;
@@ -142,23 +143,14 @@ function validateEmployyeform(){
   if(!validname || validemail || validphone){
     allValid = false;
   }
-
   allValid = true;
 }
-
-// Event for typing in form
-Employeeform.addEventListener("input", () => {
- 
-  validateEmployyeform()
-}); 
 
 function validateallexp() {
 const allexpforms = experiencesform.querySelectorAll(".expform");
     
 let allValid = true;
 
-
-    
     const jobregex = /^[A-Za-z]{2,}$/;
     const companyregex = /^[A-Za-z .&'-]{2,14}$/;
     const descregex = /^\s*\S.+$/;
@@ -184,8 +176,9 @@ let allValid = true;
     return allValid;
   }
 
-// Event for typing in form specif to experiences
-experiencesform.addEventListener("input", () => {
-
+// Event for typing in form and exp
+Employeeform.addEventListener("input", () => {
   validateallexp()
+  validateEmployyeform()
 }); 
+ 
