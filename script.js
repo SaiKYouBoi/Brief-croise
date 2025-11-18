@@ -1,7 +1,7 @@
 const urlinput = document.querySelector("input[name=url]");
 const employeeimage = document.getElementById("employeeimage");
 
-urlinput.addEventListener("change", () => {
+urlinput.addEventListener("input", () => {
   let url = urlinput.value;
   if(!url){
       employeeimage.src = "./images/anonymous-user.webp"
@@ -19,10 +19,12 @@ const Employeeform = document.getElementById("Employeeform");
 const employees = document.getElementById("employees");
 const modal = document.querySelector(".modal")
 
+
 addemployee.addEventListener("click", () => {
   addemployeemodal.classList.remove("hidden");
 });
 
+// Closing modal
 cancel.addEventListener("click", (e) => {
   e.preventDefault();
   addemployeemodal.classList.add("hidden");
@@ -105,8 +107,9 @@ displayemployees(emp);
 
 // validate inputs
 function validate(input, regex) {
-  const errorm = input?.nextElementSibling;
   
+  const errorm = input?.nextElementSibling;
+
   if (errorm) {
     if (!regex.test(input.value.trim()) && input.value) {
     input.classList.add("border-red-500");
@@ -131,7 +134,7 @@ function validateEmployyeform(){
   allValid = true
 
   const nameregex = /^[A-Za-z]{6,}$/;
-  const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+  const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneregex = /^(?:\+212|0)(6|7)[0-9]{8}$/;  
 
   const validname = validate(name ,nameregex)
@@ -157,7 +160,7 @@ let allValid = true;
 
     allexpforms.forEach((exp) => {
       const allinputs = exp.querySelectorAll("input");
-      const exptextarea = exp.querySelectorAll("textarea");
+      const exptextarea = exp.querySelector("textarea");
 
       const jobtitle = allinputs[0];
       const company = allinputs[1];
@@ -168,7 +171,9 @@ let allValid = true;
 
       const validcompany = validate(company, companyregex);
 
-      if (!validjobtitle || !validcompany) {
+      const validdescrp = validate(exptextarea, descregex);
+
+      if (!validjobtitle || !validcompany || !validdescrp) {
         allValid = false;
       }
     });
@@ -182,3 +187,23 @@ Employeeform.addEventListener("input", () => {
   validateEmployyeform()
 }); 
  
+// Event for the submit button
+Employeeform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const roleselect = modal.querySelector("select[name=roles]")
+    
+  if (!roleselect.value) {
+    alert("Please select a role.");
+    return;
+  }
+
+  if (!validateallexp()) {
+    alert("Please fix the highlighted fields.");
+    return;
+  }
+
+  if (!validateEmployyeform()) {
+    alert("Please fix the highlighted fields.");
+    return;
+  }
+}); 
