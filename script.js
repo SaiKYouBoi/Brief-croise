@@ -2,6 +2,7 @@ const KEY = "Gryffindor_Gather";
 
 let employeesarr = load();
 
+
 function save(object) {
   employeesarr.push(object);
   localStorage.setItem(KEY, JSON.stringify(employeesarr));
@@ -106,8 +107,6 @@ function displayemployees(infos) {
 //display employees in the side bar
 displayemployees(employeesarr);
 
-
-
 // validate inputs
 function validate(input, regex) {
   const errorm = input?.nextElementSibling;
@@ -134,7 +133,7 @@ function validateEmployyeform() {
 
   allValid = true;
 
-  const nameregex = /^[A-Za-z]{6,}$/;
+  const nameregex = /^[A-Z][a-z'-]+(?: [A-Z][a-z'-]+)+$/;
   const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneregex = /^(?:\+212|0)(6|7)[0-9]{8}$/;
 
@@ -156,9 +155,9 @@ function validateallexp() {
 
   let allValid = true;
 
-  const jobregex = /^[A-Za-z]{2,}$/;
-  const companyregex = /^[A-Za-z .&'-]{2,14}$/;
-  const descregex = /^\s*\S.+$/;
+  const jobregex = /^[A-Za-z][A-Za-z0-9\s\-'/]*[A-Za-z0-9]$/;
+  const companyregex = /^[A-Za-z0-9][A-Za-z0-9\s\.\-\'&]*[A-Za-z0-9]$/;
+  const descregex = /^[A-Za-z0-9\s\.,!?\-'"&:;/()]+$/;
 
   allexpforms.forEach((exp) => {
     const allinputs = exp.querySelectorAll("input");
