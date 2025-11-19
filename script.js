@@ -2,7 +2,6 @@ const KEY = "Gryffindor_Gather";
 
 let employeesarr = load();
 
-
 function save(object) {
   employeesarr.push(object);
   localStorage.setItem(KEY, JSON.stringify(employeesarr));
@@ -14,7 +13,6 @@ function load() {
 
 const urlinput = document.querySelector("input[name=url]");
 const employeeimage = document.getElementById("employeeimage");
-
 urlinput.addEventListener("input", () => {
   let url = urlinput.value;
   if (!url) {
@@ -32,6 +30,7 @@ const addexperiencebtn = document.querySelector(".addexperience");
 const Employeeform = document.getElementById("Employeeform");
 const employees = document.getElementById("employees");
 const modal = document.querySelector(".modal");
+
 
 addemployee.addEventListener("click", () => {
   addemployeemodal.classList.remove("hidden");
@@ -60,7 +59,8 @@ addexperiencebtn.addEventListener("click", (e) => {
   experiencesform.insertAdjacentHTML(
     "beforeend",
     `
-<div class="expform border border-gray-400 rounded-[11px] p-4 mt-2.5">
+<div class="expform border border-gray-400 rounded-[11px] p-4 mt-2.5 relative">
+                            <i class="removeexpbtn fa-solid fa-circle-minus text-2xl text-[#E53E3E] hover:text-[#C53030] absolute -right-2.5 -top-1.5"></i>
                             <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
                                 name="jobtitle" type="text" placeholder="Job Title">
                             <p class="error text-red-400 text-[12px] w-full hidden" id="nameerror">Job title must be at least 6 characters.</p>
@@ -85,8 +85,15 @@ addexperiencebtn.addEventListener("click", (e) => {
                         </div>
 `
   );
+
 });
 
+// remove exp int the form btn
+experiencesform.addEventListener("click", (e) => {
+  if(e.target.classList.contains("removeexpbtn")){
+    e.target.parentElement.remove();
+  }
+});
 
 function displayemployees(infos) {
   employees.innerHTML = "";
@@ -108,8 +115,36 @@ function displayemployees(infos) {
 displayemployees(employeesarr);
 
 // validate inputs
-function validate(input, regex) {
+function validate(input, regex, secondinput="") {
   const errorm = input?.nextElementSibling;
+
+if (regex == "start") {
+   if(new Date(input.value) > Date.now()){
+      input.classList.add("border-red-500");
+      errorm.classList.remove("hidden");
+      errorm.classList.add("fade-in");
+      return false
+    }else{
+      input.classList.remove("border-red-500");
+      errorm.classList.add("hidden");
+      errorm.classList.remove("fade-in");
+      return true
+    }
+}
+
+if (regex == "end") {
+   if(new Date(input.value) < new Date(secondinput.value)){
+      input.classList.add("border-red-500");
+      errorm.classList.remove("hidden");
+      errorm.classList.add("fade-in");
+      return false
+    }else{
+      input.classList.remove("border-red-500");
+      errorm.classList.add("hidden");
+      errorm.classList.remove("fade-in");
+      return true
+    }
+}
 
   if (errorm) {
     if (!regex.test(input.value.trim()) && input.value) {
@@ -124,6 +159,8 @@ function validate(input, regex) {
       return true;
     }
   }
+
+  
 }
 
 function validateEmployyeform() {
@@ -174,7 +211,11 @@ function validateallexp() {
 
     const validdescrp = validate(exptextarea, descregex);
 
-    if (!validjobtitle || !validcompany || !validdescrp) {
+    const validsdate = validate(startdate, "start")
+
+    const validedate = validate(enddate, "end", startdate)
+
+    if (!validjobtitle || !validcompany || !validdescrp || !validsdate || !validedate) {
       allValid = false;
     }
   });
@@ -191,8 +232,8 @@ Employeeform.addEventListener("input", () => {
 // Event for the submit button
 Employeeform.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  console.log(validateEmployyeform());
+  // console.log(validateallexp());
+  // console.log(validateEmployyeform());
 
   if (!validateallexp()) {
     alert("Please fix the highlighted fields.");
@@ -201,6 +242,19 @@ Employeeform.addEventListener("submit", (e) => {
 
   if (!validateEmployyeform()) {
     alert("Please fix the highlighted fields.");
+    return;
+  }
+
+   let filled = true;
+  const allinputsss = Employeeform.querySelectorAll("input")
+  allinputsss.forEach((input)=>{
+    if(input.value === ""){
+      filled = false;
+    }
+  });
+
+  if(!filled){
+    alert("Please fill the highlighted fields.");
     return;
   }
 
@@ -254,3 +308,4 @@ function collectingformdata() {
 
   return employeee;
 }
+

@@ -17,11 +17,12 @@
                 <img class="xl:w-[70%] m-auto h-auto w-[20%]" src="./images/logoimage.png" alt="Gryffindor Gather log">
             </div>
 
-            <div class="UnassignedStaff flex flex-col  items-center gap-2">
+            <div class="UnassignedStaff flex flex-col items-center gap-2">
                 <h1 class="text-center p-2 text-xl">Unassigned Staff</h1>
                 <button class="bg-emerald-400 hover:bg-emerald-500 text-white w-[90%] rounded-[5px] p-2" id="addemployee">Add
                     Employee</button>
-                <div class="w-full" id="employees">
+                <div class="w-full p-1 h-[500px] overflow-x-hidden overflow-y-scroll [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
+            [&::-webkit-scrollbar-thumb]:rounded-full " id="employees">
                     <!-- employee cards -->
                     <!-- <div class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                         <img class="w-12 h-12 rounded-[50%] object-cover" src="./images/profiles/harry.webp" alt="profile-image">
@@ -107,10 +108,13 @@
                                 <div><label class="block mb-1" for="Sdate">Start Date</label>
                                     <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
+                                    <p class="text-red-400 text-[12px] w-full hidden">  Start date cannot be in the future. Please select today or an earlier date.</p>
                                 </div>
                                 <div><label class="block mb-1 " for="Edate">End Date</label>
                                     <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
+                                        <p class="text-red-400 text-[12px] w-full hidden">End date cannot be before the start date.</p>
+                                    
                                 </div>
                             </div>
                             <textarea class="border-gray-300 rounded-md mt-2.5 border-2 w-full py-2 px-3" rows="2"
