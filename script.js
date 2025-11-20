@@ -332,13 +332,39 @@ function collectingformdata() {
   return employeee;
 }
 
-//room buttons
 const assignemployee = document.getElementById("assignemployee")
+const assingingemployees  = document.getElementById("assingingemployees")
 
+//room buttons
+const closeassingbtn = document.getElementById("closeassingbtn")
 const conferenceroombtn = document.getElementById("conferenceroombtn")
 
-conferenceroombtn.addEventListener("click",()=>{
-  assignemployee.classList.remove("hidden")
-  
 
+
+closeassingbtn.addEventListener("click",()=>{
+  assignemployee.classList.add("hidden")
 })
+
+// conference room open asign modal
+conferenceroombtn.addEventListener("click",()=>{
+  let conferenceroomemps = employeesarr.filter(e => e.role === "manager" || e.role === "cleaningstaff" || e.role=== "other")
+  assignemployee.classList.remove("hidden")
+  roomfilter(conferenceroomemps)
+})
+
+
+
+function roomfilter(roomarr){
+  assingingemployees.innerHTML = "";
+  // console.log(conferenceroomemps);
+  roomarr.forEach((emp) => {
+    assingingemployees.innerHTML += `
+    <div onclick="displayinfos('${emp.id}')" class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+                        <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
+                        <div class="nameandrole flex flex-col gap-0.5">
+                            <h1 class="text-[16px] font-medium">${emp.name}</h1>
+                            <p class="text-[12px] text-gray-400 font-light">${emp.role}</p>
+                        </div>
+                    </div>
+    `;})
+}

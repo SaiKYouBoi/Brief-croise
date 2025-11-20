@@ -174,11 +174,11 @@
       <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="assignemployee">
         <div
             class="profilemodal pt-3 w-[95%] xl:w-[28%] h-[80vh] bg-white rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 flex flex-col">
-            <div class="border-b border-gray-300 p-3 pl-0">
+            <div class="border-b border-gray-300 p-3 pl-0 relative">
                 <p class="text-xl">Assign Employee</p>
-                
+                <i id="closeassingbtn" class="fa-solid fa-xmark absolute top-4 right-0.5 hover:scale-110 hover:text-red-400"></i>
             </div>
-            <div class="flex flex-col gap">
+            <div id="assingingemployees" class="flex flex-col">
                 <div
                     class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                     <img class="w-12 h-12 rounded-[50%] object-cover" src="./images/profiles/harry.webp"
