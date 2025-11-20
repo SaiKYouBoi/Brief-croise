@@ -36,12 +36,13 @@ addemployee.addEventListener("click", () => {
   addemployeemodal.classList.remove("hidden");
 });
 
-// Closing modal
+// Closing modal Event
 cancel.addEventListener("click", (e) => {
   e.preventDefault();
   clearfomr();
 });
 
+//the function for clearing the form
 function clearfomr() {
   addemployeemodal.classList.add("hidden");
   const allexpforms = experiencesform.querySelectorAll(".expform");
@@ -52,6 +53,8 @@ function clearfomr() {
   });
   Employeeform.reset();
 }
+
+//the ecvent for adding exprience form
 
 addexperiencebtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -94,6 +97,8 @@ experiencesform.addEventListener("click", (e) => {
     e.target.parentElement.remove();
   }
 });
+
+//fucntion for displaying employees in the side bar
 
 function displayemployees(infos) {
   employees.innerHTML = "";
@@ -143,7 +148,6 @@ if (regex == "start") {
     }
 }
 
-
 if (regex == "end") {
    if(new Date(input.value) < new Date(secondinput.value)){
       input.classList.add("border-red-500");
@@ -171,9 +175,9 @@ if (regex == "end") {
       return true;
     }
   }
-
-  
 }
+
+//the function for validating form infos name email and phone
 
 function validateEmployyeform() {
   const name = modal.querySelector("input[name]");
@@ -198,6 +202,8 @@ function validateEmployyeform() {
 
   return allValid;
 }
+
+//the function for validatin experience forms
 
 function validateallexp() {
   const allexpforms = experiencesform.querySelectorAll(".expform");
@@ -244,6 +250,7 @@ Employeeform.addEventListener("input", () => {
 // Event for the submit button
 Employeeform.addEventListener("submit", (e) => {
   e.preventDefault();
+
   // console.log(validateallexp());
   // console.log(validateEmployyeform());
 
@@ -276,6 +283,8 @@ Employeeform.addEventListener("submit", (e) => {
   displayemployees(employeesarr);
 });
 
+// function for getting thedata(exps)
+
 function getallexpdata() {
   const allexpforms = experiencesform.querySelectorAll(".expform");
   const expData = [];
@@ -297,6 +306,8 @@ function getallexpdata() {
 
   return expData;
 }
+
+// function for collectin that data
 
 function collectingformdata() {
   const name = modal.querySelector("input[name]");
@@ -321,3 +332,13 @@ function collectingformdata() {
   return employeee;
 }
 
+//room buttons
+const assignemployee = document.getElementById("assignemployee")
+
+const conferenceroombtn = document.getElementById("conferenceroombtn")
+
+conferenceroombtn.addEventListener("click",()=>{
+  assignemployee.classList.remove("hidden")
+  
+
+})
