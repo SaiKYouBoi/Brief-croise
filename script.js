@@ -338,7 +338,11 @@ const assingingemployees  = document.getElementById("assingingemployees")
 //room buttons
 const closeassingbtn = document.getElementById("closeassingbtn")
 const conferenceroombtn = document.getElementById("conferenceroombtn")
-
+const receptionroombtn = document.getElementById("receptionroombtn")
+const archivesroombtn = document.getElementById("archivesroombtn")
+const securityroombtn = document.getElementById("securityroombtn")
+const staffroombtn = document.getElementById("staffroombtn")
+const serverroombtn = document.getElementById("serverroombtn")
 
 
 closeassingbtn.addEventListener("click",()=>{
@@ -347,12 +351,43 @@ closeassingbtn.addEventListener("click",()=>{
 
 // conference room open asign modal
 conferenceroombtn.addEventListener("click",()=>{
-  let conferenceroomemps = employeesarr.filter(e => e.role === "manager" || e.role === "cleaningstaff" || e.role=== "other")
   assignemployee.classList.remove("hidden")
-  roomfilter(conferenceroomemps)
+  roomfilter(employeesarr)
 })
 
+// reception room open asign modal
+receptionroombtn.addEventListener("click",()=>{
+  let receptionroomemps = employeesarr.filter(e => e.role === "receptionist" || e.role === "cleaningstaff" || e.role=== "manager")
+  assignemployee.classList.remove("hidden")
+  roomfilter(receptionroomemps)
+})
 
+// archive room open asign modal
+archivesroombtn.addEventListener("click",()=>{
+  let archivesroomemps = employeesarr.filter(e => e.role !== "cleaningstaff")
+  assignemployee.classList.remove("hidden")
+  roomfilter(archivesroomemps)
+})
+
+// security room open asign modal
+securityroombtn.addEventListener("click",()=>{
+  let securityroomemps = employeesarr.filter(e => e.role == "cleaningstaff" || e.role == "manager" || e.role == "securityagent")
+  assignemployee.classList.remove("hidden")
+  roomfilter(securityroomemps)
+})
+
+// staff room open asign modal
+staffroombtn.addEventListener("click",()=>{
+  assignemployee.classList.remove("hidden")
+  roomfilter(employeesarr)
+})
+
+// server room open asign modal
+serverroombtn.addEventListener("click",()=>{
+  let serverroomemps = employeesarr.filter(e => e.role == "cleaningstaff" || e.role == "manager" || e.role == "technician")
+  assignemployee.classList.remove("hidden")
+  roomfilter(serverroomemps)
+})
 
 function roomfilter(roomarr){
   assingingemployees.innerHTML = "";
