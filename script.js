@@ -100,7 +100,7 @@ function displayemployees(infos) {
   let filtreddata = infos.filter(e => e.status === "unsigned")
   filtreddata.forEach((emp) => {
     employees.innerHTML += `
-    <div class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+    <div onclick="displayinfos('${emp.id}')" class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                         <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                         <div class="nameandrole flex flex-col gap-0.5">
                             <h1 class="text-[16px] font-medium">${emp.name}</h1>
@@ -113,6 +113,17 @@ function displayemployees(infos) {
 
 //display employees in the side bar
 displayemployees(employeesarr);
+
+// //display emplyee profile
+
+// displayinfos(){
+// const profilemodal = createElement('div')
+
+// profilemodal.innerHTML += `
+
+
+// `
+// }
 
 // validate inputs
 function validate(input, regex, secondinput="") {
@@ -131,6 +142,7 @@ if (regex == "start") {
       return true
     }
 }
+
 
 if (regex == "end") {
    if(new Date(input.value) < new Date(secondinput.value)){
