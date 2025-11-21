@@ -62,28 +62,28 @@ addexperiencebtn.addEventListener("click", (e) => {
   experiencesform.insertAdjacentHTML(
     "beforeend",
     `
-<div class="expform border border-gray-400 rounded-[11px] p-4 mt-2.5 relative">
+<div class="expform border border-[#3C1A09] rounded-[11px] p-4 mt-2.5 relative">
                             <i class="removeexpbtn fa-solid fa-circle-minus text-2xl text-[#E53E3E] hover:text-[#C53030] absolute -right-2.5 -top-1.5"></i>
-                            <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
+                            <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
                                 name="jobtitle" type="text" placeholder="Job Title">
                             <p class="error text-red-400 text-[12px] w-full hidden" id="nameerror">Job title must be at least 6 characters.</p>
-                            <input class="border-gray-300  rounded-md mb-2 mt-2.5 border-2 w-full h-[42px] py-2 px-3"
+                            <input class="border-[#3C1A09]  rounded-md mb-2 mt-2.5 border-2 w-full h-[42px] py-2 px-3"
                                 name="Company / Organization" type="text" placeholder="Company / Organization">
                             <p class="error text-red-400 text-[12px] w-full hidden" id="nameerror">Only letters, numbers, spaces, .-'& allowed.</p>
 
                             <div class="flex flex-col xl:flex-row gap-1.5 mt-2.5">
                                 <div><label class="block mb-1" for="Sdate">Start Date</label>
-                                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                                    <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
                                     <p class="text-red-400 text-[12px] w-full hidden">  Start date cannot be in the future. Please select today or an earlier date.</p>
                                 </div>
                                 <div><label class="block mb-1 " for="Edate">End Date</label>
-                                    <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                                    <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
                                         <p class="text-red-400 text-[12px] w-full hidden">End date cannot be before the start date.</p>
                                 </div>
                             </div>
-                            <textarea class="border-gray-300 rounded-md mt-2.5 border-2 w-full py-2 px-3" rows="2"
+                            <textarea class="border-[#3C1A09] rounded-md mt-2.5 border-2 w-full py-2 px-3" rows="2"
                                 name="Description" id="Description" placeholder="Description"></textarea>
                                 <p class="error text-red-400 text-[12px] w-full hidden" id="nameerror">Only letters, numbers, spaces, .-'& allowed.</p>
                             
@@ -106,11 +106,11 @@ function displayemployees(infos) {
   let filtreddata = infos.filter(e => e.status === "unsigned")
   filtreddata.forEach((emp) => {
     employees.innerHTML += `
-    <div onclick="empdetails('${emp.id}')" class="bg-white employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+    <div onclick="empdetails('${emp.id}')" class="bg-[#A89E90] employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                         <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                         <div class="nameandrole flex flex-col gap-0.5">
                             <h1 class="text-[16px] font-medium">${emp.name}</h1>
-                            <p class="text-[12px] text-gray-400 font-light">${emp.role}</p>
+                            <p class="text-[12px] text-white font-light">${emp.role}</p>
                         </div>
                     </div>
     `;
@@ -133,7 +133,7 @@ addemployeprofile.classList.remove("hidden")
 
 profilemodal.innerHTML = `
   <div class="bg-[url('./images/cover.png')] w-full h-36 rounded-2xl relative">
-                <img class="absolute top-19 left-8 w-30 h-30 object-cover border-8 border-white rounded-[50%]"
+                <img class="absolute top-19 left-8 w-30 h-30 object-cover border-8 border-[#F3E7C9] rounded-[50%]"
                     src="${wantedemp.url}" alt="profilepic">
                 <i onClick="closeempDetails()" class="fa-solid fa-xmark absolute top-4 right-4 text-white transition hover:scale-105"></i>
             </div>
@@ -168,7 +168,7 @@ profilemodal.innerHTML = `
                 ${
                   wantedemp.experiences.map(exp => `
                           
-                <div class="border-gray-400 w-full p-3 border rounded-2xl mt-2">
+                <div class="border-black w-full p-3 border rounded-2xl mt-2">
                     <div class="flex justify-between">
                         <div class="w-[50%]">
                             <div class="flex gap-10">
@@ -484,11 +484,11 @@ function roomfilter(roomarr, roomId){
   // console.log(conferenceroomemps);
   roomarr.forEach((emp) => {
     assingingemployees.innerHTML += `
-    <div onclick="asignemp('${emp.id}','${roomId}')" class="bg-white employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+    <div onclick="asignemp('${emp.id}','${roomId}')" class="bg-[#d8cec0] employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                         <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                         <div class="nameandrole flex flex-col gap-0.5">
                             <h1 class="text-[16px] font-medium">${emp.name}</h1>
-                            <p class="text-[12px] text-gray-400 font-light">${emp.role}</p>
+                            <p class="text-[12px] text-white font-light">${emp.role}</p>
                         </div>
                     </div>
     `;})
@@ -528,12 +528,12 @@ function displayemployeesinroom(){
     let filtredemployees = employeesarr.filter(emp => emp.status === room.id)
     filtredemployees.forEach(emp => {
       room.insertAdjacentHTML("beforeend", `
-      <div onclick="empdetails('${emp.id}')" class="room-workers relative bg-white employee flex items-center gap-2.5 w-[48%] h-16 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+      <div onclick="empdetails('${emp.id}')" class="room-workers relative bg-[#A89E90] employee flex items-center gap-2.5 w-[48%] h-16 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                           <i onClick="changetounasigned('${emp.id}',event)" class="fa-solid fa-circle-xmark absolute text-red-400 hover:text-red-500 top-0.5 right-px"></i>
                           <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                           <div class="nameandrole flex flex-col gap-0.5">
                               <h1 class="text-[12px] font-medium">${emp.name}</h1>
-                              <p class="text-[9px] text-gray-400 font-light">${emp.role}</p>
+                              <p class="text-[9px] text-white font-light">${emp.role}</p>
                           </div>
                       </div>
       `)
