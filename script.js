@@ -135,7 +135,7 @@ profilemodal.innerHTML = `
   <div class="bg-[url('./images/cover.png')] w-full h-36 rounded-2xl relative">
                 <img class="absolute top-19 left-8 w-30 h-30 object-cover border-8 border-white rounded-[50%]"
                     src="${wantedemp.url}" alt="profilepic">
-                <i class="fa-solid fa-xmark absolute top-4 right-4 text-white"></i>
+                <i onClick="closeempDetails()" class="fa-solid fa-xmark absolute top-4 right-4 text-white transition hover:scale-105"></i>
             </div>
             <div class="pl-0 mt-11 h-10 border-b border-gray-300">
                 <div class="flex gap-1 items-center border-b border-black-300 w-19 h-10">
@@ -207,6 +207,14 @@ profilemodal.innerHTML = `
             </div>
 `
 }
+
+//close employee details
+function closeempDetails(){
+addemployeprofile.classList.add("hidden")
+}
+
+
+
 
 
 // validate inputs
@@ -496,14 +504,27 @@ function asignemp(empid, roomId){
     displayemployeesinroom();
 }
 
+function changetounasigned(empid,event){
+  event.stopPropagation();
+    let wantedemp = employeesarr.find(emp => emp.id === empid)
+    wantedemp.status = "unsigned"
+    localStorage.setItem(KEY, JSON.stringify(employeesarr));
+    document.getElementById("closeassingbtn").click();
+    displayemployees(employeesarr);
+    displayemployeesinroom();
+}
+
+
+
 function displayemployeesinroom(){
   let rooms = document.querySelectorAll(".room")
-
+  
   rooms.forEach(room =>{
     let filtredemployees = employeesarr.filter(emp => emp.status === room.id)
     filtredemployees.forEach(emp => {
       room.insertAdjacentHTML("beforeend", `
-      <div onclick="empdetails('${emp.id}')" class="bg-white employee flex items-center gap-2.5 w-[48%] h-16 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+      <div onclick="empdetails('${emp.id}')" class="relative bg-white employee flex items-center gap-2.5 w-[48%] h-16 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+                          <i onClick="changetounasigned('${emp.id}',event)" class="fa-solid fa-circle-xmark absolute text-red-400 hover:text-red-500 top-0.5 right-px"></i>
                           <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                           <div class="nameandrole flex flex-col gap-0.5">
                               <h1 class="text-[12px] font-medium">${emp.name}</h1>

@@ -7,14 +7,15 @@
     <title>Gryffindor Gather</title>
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 
 <body class="bg-[#FBF9EF] m-0 p-0 ">
-    <div class="grid xl:grid-cols-[1fr_4fr] w-full h-screen grid-rows-[1fr_1fr]">
+    <div class="grid grid-cols-[1fr_4fr] w-full h-screen">
 
-        <div class="shadow-[2px_0_10px_-2px_rgba(0,0,0,0.12)] w-full xl:h-screen h-full bg-white p-2 pt-0">
+        <div class="shadow-[2px_0_10px_-2px_rgba(0,0,0,0.12)] w-full h-screen bg-white p-2 pt-0">
             <div class="logo h-auto border-b-[1.5px] border-gray-300 p-2.5">
-                <img class="xl:w-[70%] m-auto h-auto w-[20%]" src="./images/logoimage.png" alt="Gryffindor Gather log">
+                <img class="w-[70%] m-auto h-auto" src="./images/logoimage.png" alt="Gryffindor Gather log">
             </div>
 
             <div class="UnassignedStaff flex flex-col items-center gap-2">
@@ -54,7 +55,7 @@
         <!-- modal -->
         <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="addemployeemodal">
             <div
-                class="modal w-[95%] xl:w-[30%] h-[95vh] bg-white rounded-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 py-6 overflow-hidden flex flex-col">
+                class="modal w-[30%] h-[95vh] bg-white rounded-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 py-6 overflow-hidden flex flex-col">
                 <div class="overflow-y-auto p-6 py-4 pt-0 flex-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
             [&::-webkit-scrollbar-thumb]:rounded-full ">
                     <form id="Employeeform">
@@ -104,7 +105,7 @@
                                 name="Company / Organization" type="text" placeholder="Company / Organization">
                             <p class="text-red-400 text-[12px] w-full hidden">Enter a valid company name (letters, numbers, .-’& allowed).</p>
 
-                            <div class="flex flex-col xl:flex-row gap-1.5 mt-2.5">
+                            <div class="flex flex-row gap-1.5 mt-2.5">
                                 <div><label class="block mb-1" for="Sdate">Start Date</label>
                                     <input class="border-gray-300  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
@@ -141,29 +142,29 @@
         </div>
         <div class="plan relative">
             <div
-                class="bg-[url('./images/rommplaan.png')] bg-cover bg-no-repeat bg-center h-[95%] xl:w-[90%] w-[96%] border-4 border-[#1C3A4D] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-22 grid-rows-8 gap-0">
+                class="bg-[url('./images/rommplaan.png')] bg-cover bg-no-repeat bg-center h-[95%] w-[90%] border-4 border-[#1C3A4D] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-22 grid-rows-8 gap-0">
                 <div class="room  col-start-1 col-end-9 row-start-1 row-end-4 relative p-2 flex flex-wrap" id="conferenceroom">
                     <button id="conferenceroombtn" class="absolute top-52 left-43 border-7 border-[#EDEDED] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors hover:bg-[#4EB097]/90 bg-[#59C3A7]/90 flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
                 
-                <div class="room col-start-1 col-end-9 row-start-4 row-end-9 p-2" id="reception">
+                <div class="room col-start-1 col-end-9 row-start-4 row-end-9 p-2 relative" id="reception">
                     <button id="receptionroombtn" class="absolute top-105 left-91 border-7 border-[#EDEDED] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors hover:bg-[#55798C]/70 bg-[#61879B]/70 flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
 
-                <div class="room  col-start-12 col-end-18 row-start-1 row-end-4 p-2 pl-9 flex gap-0.5" id="archivesroom">
+                <div class="room  col-start-12 col-end-18 row-start-1 row-end-4 p-2 pl-9 flex flex-wrap" id="archivesroom">
                     <button id="archivesroombtn" class="absolute top-52 left-171 border-7 border-[#EDEDED] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors hover:bg-[#C6534C]/90 bg-[#D95F58]/90 flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
 
-                <div class="room  col-start-18 col-end-23 row-start-1 row-end-4 p-2" id="securityroom">
+                <div class="room  col-start-18 col-end-23 row-start-1 row-end-4 p-2 flex flex-wrap" id="securityroom">
                     <button id="securityroombtn" class="absolute top-52 left-235 border-7 border-[#EDEDED] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors hover:bg-[#4A5866]/90 bg-[#424F5B]/90 flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
                 
-                <div class="room col-start-12 col-end-18 row-start-6 row-end-9 p-2 pl-9" id="staffroom">
+                <div class="room col-start-12 col-end-18 row-start-6 row-end-9 p-2 pl-9 flex flex-wrap" id="staffroom">
                     <button id="staffroombtn" class="absolute top-128 left-136 border-7 border-[#EDEDED] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors hover:bg-[#E0B149]/90 bg-[#F5C251]/90 flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
                 
                 
-                <div class="room col-start-18 col-end-23 row-start-6 row-end-9 p-2" id="serverroom">
+                <div class="room col-start-18 col-end-23 row-start-6 row-end-9 p-2 flex flex-wrap" id="serverroom">
                     <button id="serverroombtn" class="absolute top-128 left-204 border-7 border-[#EDEDED] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors hover:bg-[#90B3C0]/90 bg-[#9FC2CF]/90 flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
             </div>
@@ -173,7 +174,7 @@
     <!-- Assign an employee mmodal -->
       <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="assignemployee">
         <div
-            class="assignmodal pt-3 w-[95%] xl:w-[28%] h-[80vh] bg-white rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 flex flex-col">
+            class="assignmodal pt-3 w-[28%] h-[80vh] bg-white rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 flex flex-col">
             <div class="border-b border-gray-300 p-3 pl-0 relative">
                 <p class="text-xl">Assign Employee</p>
                 <i id="closeassingbtn" class="fa-solid fa-xmark absolute top-4 right-0.5 hover:scale-110 hover:text-red-400"></i>
@@ -191,7 +192,7 @@
     <!-- details of an employee mmodal -->
     <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="addemployeprofile">
         <div
-            class="profilemodal w-[95%] xl:w-[35%] h-[95vh] bg-white rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 flex flex-col overflow-hidden">
+            class="profilemodal w-[35%] h-[95vh] bg-white rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 flex flex-col overflow-hidden">
             
         </div>
     </div>
