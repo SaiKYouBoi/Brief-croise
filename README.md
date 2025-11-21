@@ -1,1 +1,1 @@
-# Workspace Staff Manager (Gryffindor Gather)-
+# Workspace Staff Manager (Gryffindor Gather)
