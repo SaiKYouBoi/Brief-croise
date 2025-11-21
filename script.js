@@ -106,7 +106,7 @@ function displayemployees(infos) {
   let filtreddata = infos.filter(e => e.status === "unsigned")
   filtreddata.forEach((emp) => {
     employees.innerHTML += `
-    <div onclick="empdetails('${emp.id}')" class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+    <div onclick="empdetails('${emp.id}')" class="bg-white employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                         <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                         <div class="nameandrole flex flex-col gap-0.5">
                             <h1 class="text-[16px] font-medium">${emp.name}</h1>
@@ -135,6 +135,7 @@ profilemodal.innerHTML = `
   <div class="bg-[url('./images/cover.png')] w-full h-36 rounded-2xl relative">
                 <img class="absolute top-19 left-8 w-30 h-30 object-cover border-8 border-white rounded-[50%]"
                     src="${wantedemp.url}" alt="profilepic">
+                <i class="fa-solid fa-xmark absolute top-4 right-4 text-white"></i>
             </div>
             <div class="pl-0 mt-11 h-10 border-b border-gray-300">
                 <div class="flex gap-1 items-center border-b border-black-300 w-19 h-10">
@@ -475,7 +476,7 @@ function roomfilter(roomarr, roomId){
   // console.log(conferenceroomemps);
   roomarr.forEach((emp) => {
     assingingemployees.innerHTML += `
-    <div onclick="asignemp('${emp.id}','${roomId}')" class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+    <div onclick="asignemp('${emp.id}','${roomId}')" class="bg-white employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                         <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                         <div class="nameandrole flex flex-col gap-0.5">
                             <h1 class="text-[16px] font-medium">${emp.name}</h1>
@@ -502,15 +503,16 @@ function displayemployeesinroom(){
     let filtredemployees = employeesarr.filter(emp => emp.status === room.id)
     filtredemployees.forEach(emp => {
       room.insertAdjacentHTML("beforeend", `
-      <div onclick="empdetails('${emp.id}')" class="employee flex items-center gap-4.5 w-full h-16 mt-3 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+      <div onclick="empdetails('${emp.id}')" class="bg-white employee flex items-center gap-2.5 w-[48%] h-16 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
                           <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                           <div class="nameandrole flex flex-col gap-0.5">
-                              <h1 class="text-[16px] font-medium">${emp.name}</h1>
-                              <p class="text-[12px] text-gray-400 font-light">${emp.role}</p>
+                              <h1 class="text-[12px] font-medium">${emp.name}</h1>
+                              <p class="text-[9px] text-gray-400 font-light">${emp.role}</p>
                           </div>
                       </div>
       `)
     })
   })
 }
+
 displayemployeesinroom();
