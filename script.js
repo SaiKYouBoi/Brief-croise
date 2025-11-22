@@ -213,10 +213,6 @@ function closeempDetails(){
 addemployeprofile.classList.add("hidden")
 }
 
-
-
-
-
 // validate inputs
 function validate(input, regex, secondinput="") {
   const errorm = input?.nextElementSibling;
@@ -495,7 +491,7 @@ function roomfilter(roomarr, roomId){
 }
 
 const roomlimit = {
-  conferenceroom: 4,
+  conferenceroom: 6,
   reception: 3,
   archivesroom: 2,
   securityroom: 3,

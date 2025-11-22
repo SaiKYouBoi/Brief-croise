@@ -11,9 +11,9 @@
 </head>
 
 <body class="bg-[#E1AB41] m-0 p-0 ">
-    <div class="grid lg:grid-cols-[1fr_4fr] grid-row-[1fr_1fr] w-full h-screen">
+    <div class="grid lg:grid-cols-[1fr_4fr] grid-cols-1 w-full h-screen">
 
-        <div class="shadow-[2px_0_25px_-4px_rgba(0,0,0,0.22)] w-full h-screen bg-[#F9E8C8] p-2 pt-0">
+        <div class="shadow-[2px_0_25px_-4px_rgba(0,0,0,0.22)] w-full lg:h-screen h-auto bg-[#F9E8C8] p-2 pt-0">
             <div class="logo h-auto border-b-[1.5px] border-gray-300 p-2.5">
                 <img class="w-[70%] m-auto h-auto" src="./images/logoimage.png" alt="Gryffindor Gather log">
             </div>
@@ -140,9 +140,10 @@
                 </form>
             </div>
         </div>
-        <div class="plan relative">
+        <div class="plan">
             <div
-                class="bg-[url('./images/roommplaann.png')] bg-cover bg-no-repeat bg-center h-[95%] w-[90%] border-3 border-[#673B14] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-22 grid-rows-8 gap-0">
+                class="bg-[url('./images/roommplaann.png')] bg-contain bg-no-repeat bg-center w-full max-w-[1080px] mx-auto mt-3 aspect-16/10 grid grid-cols-22 grid-rows-8 gap-0 rotate-90 scale-[0.75]
+        sm:rotate-0 sm:scale-100">
                 <div class="room  col-start-1 col-end-9 row-start-1 row-end-4 relative p-2 flex flex-wrap" id="conferenceroom">
                     <button id="conferenceroombtn" class="absolute top-51 left-43 border-7 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
@@ -165,21 +166,22 @@
                 
                 
                 <div class="room col-start-18 col-end-23 row-start-6 row-end-9 p-2 flex flex-wrap" id="serverroom">
-                    <button id="serverroombtn" class="absolute top-128 left-214 border-7 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
+                    <button id="serverroombtn" class="absolute top-[78%] left-[78%] border-7 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 w-17 h-17 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[25px] text-white"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Assign an employee mmodal -->
-      <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="assignemployee">
+    <!-- assign an employee mmodal -->
+      <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(33,21,21,0.9)] z-999 hidden" id="assignemployee">
         <div
             class="assignmodal pt-3 w-[28%] h-[80vh] bg-[#F3E7C9] rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 flex flex-col">
             <div class="border-b border-gray-300 p-3 pl-0 relative">
                 <p class="text-xl">Assign Employee</p>
                 <i id="closeassingbtn" class="fa-solid fa-xmark absolute top-4 right-0.5 hover:scale-110 hover:text-red-400"></i>
             </div>
-            <div id="assingingemployees" class="flex flex-col">
+            <div id="assingingemployees" class="flex flex-col p-4 h-fit overflow-y-scroll [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
+            [&::-webkit-scrollbar-thumb]:rounded-full">
                 
             
             </div>
