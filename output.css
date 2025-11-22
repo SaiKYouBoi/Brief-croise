@@ -215,32 +215,14 @@
   .top-19 {
     top: calc(var(--spacing) * 19);
   }
-  .top-51 {
-    top: calc(var(--spacing) * 51);
-  }
-  .top-97 {
-    top: calc(var(--spacing) * 97);
-  }
-  .top-128 {
-    top: calc(var(--spacing) * 128);
-  }
-  .top-\[\%\] {
-    top: %;
-  }
-  .top-\[55\%\] {
-    top: 55%;
+  .top-\[32\%\] {
+    top: 32%;
   }
   .top-\[60\%\] {
     top: 60%;
   }
   .top-\[78\%\] {
     top: 78%;
-  }
-  .top-\[80\%\] {
-    top: 80%;
-  }
-  .top-\[89\%\] {
-    top: 89%;
   }
   .-right-2 {
     right: calc(var(--spacing) * -2);
@@ -272,44 +254,23 @@
   .left-8 {
     left: calc(var(--spacing) * 8);
   }
-  .left-43 {
-    left: calc(var(--spacing) * 43);
+  .left-\[16\%\] {
+    left: 16%;
   }
-  .left-88 {
-    left: calc(var(--spacing) * 88);
+  .left-\[32\%\] {
+    left: 32%;
   }
-  .left-136 {
-    left: calc(var(--spacing) * 136);
+  .left-\[49\.5\%\] {
+    left: 49.5%;
   }
-  .left-171 {
-    left: calc(var(--spacing) * 171);
+  .left-\[64\%\] {
+    left: 64%;
   }
-  .left-214 {
-    left: calc(var(--spacing) * 214);
+  .left-\[77\.5\%\] {
+    left: 77.5%;
   }
-  .left-235 {
-    left: calc(var(--spacing) * 235);
-  }
-  .left-\[\%\] {
-    left: %;
-  }
-  .left-\[7\%\] {
-    left: 7%;
-  }
-  .left-\[45\%\] {
-    left: 45%;
-  }
-  .left-\[77\%\] {
-    left: 77%;
-  }
-  .left-\[78\%\] {
-    left: 78%;
-  }
-  .left-\[79\%\] {
-    left: 79%;
-  }
-  .left-\[80\%\] {
-    left: 80%;
+  .left-\[86\%\] {
+    left: 86%;
   }
   .z-999 {
     z-index: 999;
@@ -380,9 +341,6 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
   .mt-11 {
     margin-top: calc(var(--spacing) * 11);
   }
@@ -416,9 +374,6 @@
   .aspect-16\/10 {
     aspect-ratio: 16/10;
   }
-  .aspect-\[16\/10\] {
-    aspect-ratio: 16/10;
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -445,9 +400,6 @@
   }
   .h-\[80vh\] {
     height: 80vh;
-  }
-  .h-\[95\%\] {
-    height: 95%;
   }
   .h-\[95vh\] {
     height: 95vh;
@@ -485,9 +437,6 @@
   .w-\[28\%\] {
     width: 28%;
   }
-  .w-\[30\%\] {
-    width: 30%;
-  }
   .w-\[35\%\] {
     width: 35%;
   }
@@ -496,9 +445,6 @@
   }
   .w-\[50\%\] {
     width: 50%;
-  }
-  .w-\[70\%\] {
-    width: 70%;
   }
   .w-\[90\%\] {
     width: 90%;
@@ -509,20 +455,8 @@
   .w-screen {
     width: 100vw;
   }
-  .max-w-\[1px\] {
-    max-width: 1px;
-  }
-  .max-w-\[900px\] {
-    max-width: 900px;
-  }
-  .max-w-\[1000px\] {
-    max-width: 1000px;
-  }
   .max-w-\[1080px\] {
     max-width: 1080px;
-  }
-  .max-w-\[1100px\] {
-    max-width: 1100px;
   }
   .flex-1 {
     flex: 1;
@@ -659,10 +593,6 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-3 {
-    border-style: var(--tw-border-style);
-    border-width: 3px;
-  }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
@@ -749,9 +679,6 @@
   }
   .bg-contain {
     background-size: contain;
-  }
-  .bg-cover {
-    background-size: cover;
   }
   .bg-center {
     background-position: center;
@@ -988,6 +915,26 @@
       }
     }
   }
+  .sm\:mt-2 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 2);
+    }
+  }
+  .sm\:mt-5 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:mt-8 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:mt-14 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 14);
+    }
+  }
   .sm\:scale-100 {
     @media (width >= 40rem) {
       --tw-scale-x: 100%;
@@ -1004,6 +951,46 @@
   .lg\:h-screen {
     @media (width >= 64rem) {
       height: 100vh;
+    }
+  }
+  .lg\:w-\[\%\] {
+    @media (width >= 64rem) {
+      width: %;
+    }
+  }
+  .lg\:w-\[4\%\] {
+    @media (width >= 64rem) {
+      width: 4%;
+    }
+  }
+  .lg\:w-\[28\%\] {
+    @media (width >= 64rem) {
+      width: 28%;
+    }
+  }
+  .lg\:w-\[30\%\] {
+    @media (width >= 64rem) {
+      width: 30%;
+    }
+  }
+  .lg\:w-\[35\%\] {
+    @media (width >= 64rem) {
+      width: 35%;
+    }
+  }
+  .lg\:w-\[40\%\] {
+    @media (width >= 64rem) {
+      width: 40%;
+    }
+  }
+  .lg\:w-\[45\%\] {
+    @media (width >= 64rem) {
+      width: 45%;
+    }
+  }
+  .lg\:w-\[70\%\] {
+    @media (width >= 64rem) {
+      width: 70%;
     }
   }
   .lg\:grid-cols-\[1fr_4fr\] {
