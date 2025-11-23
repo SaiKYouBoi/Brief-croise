@@ -169,9 +169,9 @@ profilemodal.innerHTML = `
                   wantedemp.experiences.map(exp => `
                           
                 <div class="border-black w-full p-3 border rounded-2xl mt-2">
-                    <div class="flex justify-between">
-                        <div class="w-[50%]">
-                            <div class="flex gap-10">
+                    <div class="flex justify-between gap-2.5 sm:gap-0 sm:flex-row flex-col">
+                        <div class="sm:w-[50%] w-full">
+                            <div class="flex gap-7">
                                 <div class="flex flex-col gap-2.5">
                                     <p>Job title:</p>
                                     <p>Start date:</p>
@@ -182,8 +182,8 @@ profilemodal.innerHTML = `
                                 </div>
                             </div>
                         </div>
-                        <div class="w-[50%]">
-                            <div class="flex gap-10">
+                        <div class="sm:w-[50%] w-full">
+                            <div class="flex gap-7">
                                 <div class="flex flex-col gap-2.5">
                                     <p>Company:</p>
                                     <p>End date:</p>
@@ -541,12 +541,12 @@ function displayemployeesinroom(){
     let filtredemployees = employeesarr.filter(emp => emp.status === room.id)
     filtredemployees.forEach(emp => {
       room.insertAdjacentHTML("beforeend", `
-      <div onclick="empdetails('${emp.id}')" class="room-workers relative bg-[#A89E90] employee flex items-center gap-2.5 max-w-[80%] min-w-[45%] h-16 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
-                          <i onClick="changetounasigned('${emp.id}',event)" class="fa-solid fa-circle-xmark absolute  text-red-400 hover:text-red-500 top-11 left-"></i>
-                          <img class="w-12 h-12 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
+      <div onclick="empdetails('${emp.id}')" class="room-workers relative bg-[#A89E90] employee flex items-center gap-2.5 sm:max-w-[80%] sm:min-w-[45%] sm:h-16 h-9 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
+                          <i onClick="changetounasigned('${emp.id}',event)" class="fa-solid fa-circle-xmark absolute text-[10px] lg:text-[17px] text-red-400 hover:text-red-500 sm:top-11 top-6"></i>
+                          <img class="sm:w-12 sm:h-12 w-7 h-7 rounded-[50%] object-cover" src="${emp.url}" alt="profile-image">
                           <div class="nameandrole flex flex-col gap-0.5">
-                              <h1 class="text-[12px] font-medium">${emp.name}</h1>
-                              <p class="text-[9px] text-white font-light">${emp.role}</p>
+                              <h1 class="sm:text-[12px] text-[7px] font-medium">${emp.name}</h1>
+                              <p class="sm:text-[9px] text-[5px] text-white font-light">${emp.role}</p>
                           </div>
                       </div>
       `)
