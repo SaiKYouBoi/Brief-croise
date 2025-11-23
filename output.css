@@ -473,6 +473,12 @@
   .w-30 {
     width: calc(var(--spacing) * 30);
   }
+  .w-\[4\] {
+    width: 4;
+  }
+  .w-\[48\%\] {
+    width: 48%;
+  }
   .w-\[50\%\] {
     width: 50%;
   }
@@ -1022,6 +1028,11 @@
       width: calc(var(--spacing) * 17);
     }
   }
+  .sm\:w-\[48\%\] {
+    @media (width >= 40rem) {
+      width: 48%;
+    }
+  }
   .sm\:w-\[50\%\] {
     @media (width >= 40rem) {
       width: 50%;
@@ -1159,6 +1170,26 @@
   .xl\:flex-row {
     @media (width >= 80rem) {
       flex-direction: row;
+    }
+  }
+  .landscape\:w-\[140\] {
+    @media (orientation: landscape) {
+      width: 140;
+    }
+  }
+  .landscape\:w-\[140vw\] {
+    @media (orientation: landscape) {
+      width: 140vw;
+    }
+  }
+  .landscape\:w-\[140wh\] {
+    @media (orientation: landscape) {
+      width: 140wh;
+    }
+  }
+  .landscape\:w-screen {
+    @media (orientation: landscape) {
+      width: 100vw;
     }
   }
   .\[\&\:\:-webkit-scrollbar\]\:w-1\.5 {

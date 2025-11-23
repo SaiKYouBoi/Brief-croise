@@ -32,6 +32,7 @@ const addexperiencebtn = document.querySelector(".addexperience");
 const Employeeform = document.getElementById("Employeeform");
 const employees = document.getElementById("employees");
 const modal = document.querySelector(".modal");
+const employeimage = Employeeform.querySelector("img")
 
 addemployee.addEventListener("click", () => {
   addemployeemodal.classList.remove("hidden");
@@ -41,6 +42,7 @@ addemployee.addEventListener("click", () => {
 cancel.addEventListener("click", (e) => {
   e.preventDefault();
   clearfomr();
+  employeeimage.src = "./images/profiles/anonymoususer.png"
 });
 
 //the function for clearing the form
@@ -71,13 +73,13 @@ addexperiencebtn.addEventListener("click", (e) => {
                                 name="Company / Organization" type="text" placeholder="Company / Organization">
                             <p class="error text-red-400 text-[12px] w-full hidden" id="nameerror">Only letters, numbers, spaces, .-'& allowed.</p>
 
-                            <div class="flex flex-col xl:flex-row gap-1.5 mt-2.5">
-                                <div><label class="block mb-1" for="Sdate">Start Date</label>
+                            <div class="flex flex-col sm:flex-row gap-1.5 mt-2.5">
+                                <div class="sm:w-[48%] w-full"><label class="block mb-1" for="Sdate">Start Date</label>
                                     <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
                                     <p class="text-red-400 text-[12px] w-full hidden">  Start date cannot be in the future. Please select today or an earlier date.</p>
                                 </div>
-                                <div><label class="block mb-1 " for="Edate">End Date</label>
+                                <div class="sm:w-[48%] w-full"><label class="block mb-1 " for="Edate">End Date</label>
                                     <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
                                         name="phone" type="date">
                                         <p class="text-red-400 text-[12px] w-full hidden">End date cannot be before the start date.</p>
@@ -129,7 +131,6 @@ function empdetails(empid){
 let wantedemp = employeesarr.find(emp => emp.id === empid)
 
 addemployeprofile.classList.remove("hidden")
-
 
 profilemodal.innerHTML = `
   <div class="bg-[url('./images/cover.png')] w-full h-36 rounded-2xl relative">
@@ -362,7 +363,8 @@ Employeeform.addEventListener("submit", (e) => {
 
   const employeeinfos = collectingformdata();
   save(employeeinfos);
-  clearfomr();
+  clearfomr();  
+  employeeimage.src = "./images/profiles/anonymoususer.png"
   displayemployees(employeesarr);
 });
 
