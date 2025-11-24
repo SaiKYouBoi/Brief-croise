@@ -503,13 +503,13 @@ const roomlimit = {
 function asignemp(empid, roomId){
 
     let currentcount = employeesarr.filter(emp => emp.status === roomId).length;
-    console.log(currentcount);
+    // console.log(currentcount);
     
    if (currentcount >= roomlimit[roomId]) {
     alert("This room is full!");
     return;
   }
-  
+  document.querySelector
   let wantedemp = employeesarr.find(emp => emp.id === empid)
     wantedemp.status = roomId
     localStorage.setItem(KEY, JSON.stringify(employeesarr));
@@ -538,6 +538,12 @@ function displayemployeesinroom(){
   
   rooms.forEach(room =>{
     let filtredemployees = employeesarr.filter(emp => emp.status === room.id)
+    if (filtredemployees.length === 0 && room.id != "conferenceroom" && room.id != "staffroom"  ) {
+      room.classList.add("bg-red-400/20");
+    } else {
+      room.classList.remove("bg-red-400/20");
+    }
+
     filtredemployees.forEach(emp => {
       room.insertAdjacentHTML("beforeend", `
       <div onclick="empdetails('${emp.id}')" class="room-workers relative bg-[#A89E90] employee flex items-center gap-2.5 sm:max-w-[80%] sm:min-w-[45%] sm:h-16 h-9 mt-1.5 mr-1 border-l-4 border-[#2A0404] rounded-[5px] shadow-md hover:shadow-lg transition duration-300 hover:ease-in hover:scale-102 p-3 cursor-pointer">
