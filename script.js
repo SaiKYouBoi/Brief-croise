@@ -12,7 +12,6 @@ function load() {
 }
 
 // the event for the url image
-
 const urlinput = document.querySelector("input[name=url]");
 const employeeimage = document.getElementById("employeeimage");
 urlinput.addEventListener("input", () => {
@@ -262,7 +261,6 @@ if (regex == "end") {
 }
 
 //the function for validating form infos name email and phone
-
 function validateEmployyeform() {
   const name = modal.querySelector("input[name]");
   const email = modal.querySelector("input[name=email]");
@@ -505,7 +503,8 @@ const roomlimit = {
 function asignemp(empid, roomId){
 
     let currentcount = employeesarr.filter(emp => emp.status === roomId).length;
-  
+    console.log(currentcount);
+    
    if (currentcount >= roomlimit[roomId]) {
     alert("This room is full!");
     return;
@@ -528,8 +527,6 @@ function changetounasigned(empid,event){
     displayemployees(employeesarr);
     displayemployeesinroom();
 }
-
-
 
 function displayemployeesinroom(){
   let rooms = document.querySelectorAll(".room")

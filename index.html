@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gryffindor Gather</title>
     <link href="./output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body class="bg-[#E1AB41] m-0 p-0 ">
@@ -20,7 +22,8 @@
 
             <div class="UnassignedStaff flex flex-col items-center gap-2">
                 <h1 class="text-center p-2 text-xl">Unassigned Staff</h1>
-                <button class="bg-[#C46021] hover:bg-[#D26D27] font-semibold text-[#3C1A09] w-[90%] rounded-[5px] p-2" id="addemployee">Add
+                <button class="bg-[#C46021] hover:bg-[#D26D27] font-semibold text-[#3C1A09] w-[90%] rounded-[5px] p-2"
+                    id="addemployee">Add
                     Employee</button>
                 <div class="w-full p-1 h-[500px] overflow-x-hidden overflow-y-scroll [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
             [&::-webkit-scrollbar-thumb]:rounded-full " id="employees">
@@ -64,11 +67,12 @@
                         <label class="block mb-1 mt-3.5" for="name">Name</label>
                         <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="name"
                             type="text" placeholder="Enter your name">
-                        <p class="text-red-400 text-[12px] w-full hidden">Please enter a valid full name, starting with capital letters for each part.</p>
+                        <p class="text-red-400 text-[12px] w-full hidden">Please enter a valid full name, starting with
+                            capital letters for each part.</p>
 
-                        <label class="block mb-1 mt-3.5" for="role">Role</label>
-                        <select class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="roles"
-                            id="roles"> 
+                        <label class="block mb-1 mt-3.5" for="roles">Role</label>
+                        <select class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                            name="roles" id="roles">
                             <option value="">Select a role</option>
                             <option value="receptionist">Receptionist</option>
                             <option value="technician">IT Technician</option>
@@ -86,103 +90,131 @@
                             src="./images/profiles/anonymoususer.png" alt="EmployeeImage" id="employeeimage">
 
                         <label class="block mb-1 mt-3.5" for="email">Email</label>
-                        <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" id="email" name="email"
-                            type="text" placeholder="Enter your email">
+                        <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" id="email"
+                            name="email" type="text" placeholder="Enter your email">
                         <p class="text-red-400 text-[12px] w-full hidden">Email in not valid.</p>
 
                         <label class="block mb-1 mt-3.5" for="phone">Phone</label>
                         <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3" name="phone"
                             type="text" placeholder="Enter your phone number">
-                        <p class="text-red-400 text-[12px] w-full hidden">Phone number must start with 06/07 or +2126/+2127.</p>
+                        <p class="text-red-400 text-[12px] w-full hidden">Phone number must start with 06/07 or
+                            +2126/+2127.</p>
 
-                        <label class="block mb-1 mt-3.5" for="Experience">Experience</label>
+                        <label class="block mb-1 mt-3.5" for="experiences">Experience</label>
                         <div id="experiences">
-                        <div class="expform border border-[#3C1A09] rounded-[11px] p-4 mt-2.5">
-                            <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
-                                name="jobtitle" type="text" placeholder="Job Title">
-                            <p class="text-red-400 text-[12px] w-full hidden">Enter a valid job title (letters, numbers, -/' allowed).</p>
-                            <input class="border-[#3C1A09]  rounded-md mb-2 mt-2.5 border-2 w-full h-[42px] py-2 px-3"
-                                name="Company / Organization" type="text" placeholder="Company / Organization">
-                            <p class="text-red-400 text-[12px] w-full hidden">Enter a valid company name (letters, numbers, .-’& allowed).</p>
+                            <div class="expform border border-[#3C1A09] rounded-[11px] p-4 mt-2.5">
+                                <input class="border-[#3C1A09]  rounded-md mb-2 border-2 w-full h-[42px] py-2 px-3"
+                                    name="jobtitle" type="text" placeholder="Job Title">
+                                <p class="text-red-400 text-[12px] w-full hidden">Enter a valid job title (letters,
+                                    numbers, -/' allowed).</p>
+                                <input
+                                    class="border-[#3C1A09]  rounded-md mb-2 mt-2.5 border-2 w-full h-[42px] py-2 px-3"
+                                    name="Company / Organization" type="text" placeholder="Company / Organization">
+                                <p class="text-red-400 text-[12px] w-full hidden">Enter a valid company name (letters,
+                                    numbers, .-’& allowed).</p>
 
-                            <div class="flex sm:flex-row flex-col justify-between gap-0.5 mt-2.5">
-                                <div class="sm:w-[48%] w-full"><label class="block mb-1" for="Sdate">Start Date</label>
-                                    <input class="border-[#3C1A09] rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
-                                        name="phone" type="date">
-                                    <p class="text-red-400 text-[12px] w-full hidden">  Start date cannot be in the future. Please select today or an earlier date.</p>
+                                <div class="flex sm:flex-row flex-col justify-between gap-0.5 mt-2.5">
+                                    <div class="sm:w-[48%] w-full"><label class="block mb-1" for="Sdate">Start
+                                            Date</label>
+                                        <input
+                                            class="border-[#3C1A09] rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                                            name="Sdate" type="date">
+                                        <p class="text-red-400 text-[12px] w-full hidden"> Start date cannot be in the
+                                            future. Please select today or an earlier date.</p>
+                                    </div>
+                                    <div class="sm:w-[48%] w-full"><label class="block mb-1 " for="Edate">End
+                                            Date</label>
+                                        <input
+                                            class="border-[#3C1A09] rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
+                                            name="Sdate" type="date">
+                                        <p class="text-red-400 text-[12px] w-full hidden">End date cannot be before the
+                                            start date.</p>
+
+                                    </div>
                                 </div>
-                                <div class="sm:w-[48%] w-full"><label class="block mb-1 " for="Edate">End Date</label>
-                                    <input class="border-[#3C1A09] rounded-md mb-2 border-2 w-full h-[38px] py-2 px-3"
-                                        name="phone" type="date">
-                                        <p class="text-red-400 text-[12px] w-full hidden">End date cannot be before the start date.</p>
-                                    
-                                </div>
+                                <textarea class="border-[#3C1A09] rounded-md mt-2.5 border-2 w-full py-2 px-3" rows="2"
+                                    name="Description" id="Description" placeholder="Description"></textarea>
+                                <p class="text-red-400 text-[12px] w-full hidden">Description cannot be empty and must
+                                    use valid characters.</p>
+
                             </div>
-                            <textarea class="border-[#3C1A09] rounded-md mt-2.5 border-2 w-full py-2 px-3" rows="2"
-                                name="Description" id="Description" placeholder="Description"></textarea>
-                            <p class="text-red-400 text-[12px] w-full hidden">Description cannot be empty and must use valid characters.</p>
-                            
-                        </div>
                         </div>
                         <button type="button"
-                                class="addexperience bg-[#C46021] hover:bg-[#D26D27]  text-white w-full mt-2.5 rounded-[5px] p-2">Add
-                                Another Experience</button>
-                    
+                            class="addexperience bg-[#C46021] hover:bg-[#D26D27]  text-white w-full mt-2.5 rounded-[5px] p-2">Add
+                            Another Experience</button>
+
                 </div>
-                 <div class="flex gap-5 mt-5 pr-6 pl-6">
-                            <button
-                                class="bg-[#DA8342] hover:bg-[#D26D27] text-[#3C1A09] font-semibold w-full mt-2.5 rounded-[5px] p-2" id="cancel">
-                                Cancel</button>
-                            <button type="submit"
-                                class="bg-[#DA8342] hover:bg-[#D26D27] text-[#3C1A09] font-semibold  w-full mt-2.5 rounded-[5px] p-2">
-                                Submit</button>
-                        </div>
+                <div class="flex gap-5 mt-5 pr-6 pl-6">
+                    <button
+                        class="bg-[#DA8342] hover:bg-[#D26D27] text-[#3C1A09] font-semibold w-full mt-2.5 rounded-[5px] p-2"
+                        id="cancel">
+                        Cancel</button>
+                    <button type="submit"
+                        class="bg-[#DA8342] hover:bg-[#D26D27] text-[#3C1A09] font-semibold  w-full mt-2.5 rounded-[5px] p-2">
+                        Submit</button>
+                </div>
                 </form>
+                
             </div>
         </div>
         <div class="plan flex items-center justify-center w-full">
             <div
                 class="bg-[url('./images/roommplaann.png')] bg-contain bg-no-repeat bg-center w-full max-w-[1080px] mx-auto aspect-16/10 grid grid-cols-22 grid-rows-8 gap-0 scale-100">
                 <div class="room col-start-1 col-end-9 row-start-1 row-end-4 p-2.5 flex flex-wrap" id="conferenceroom">
-                    <button id="conferenceroombtn" class="absolute top-[32%] left-[16%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
+                    <button id="conferenceroombtn"
+                        class="absolute top-[32%] left-[16%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i
+                            class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
                 </div>
-                
+
                 <div class="room col-start-1 col-end-9 row-start-4 row-end-9 p-2.5 flex flex-wrap" id="reception">
-                    <button id="receptionroombtn" class="absolute top-[60%] left-[32%] sm:border-7 border-4 border-[#673B14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
+                    <button id="receptionroombtn"
+                        class="absolute top-[60%] left-[32%] sm:border-7 border-4 border-[#673B14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i
+                            class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
                 </div>
 
                 <div class="room  col-start-12 col-end-18 row-start-1 row-end-4 pl-8 flex flex-wrap" id="archivesroom">
-                    <button id="archivesroombtn" class="absolute top-[32%] left-[64%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
+                    <button id="archivesroombtn"
+                        class="absolute top-[32%] left-[64%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i
+                            class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
                 </div>
 
                 <div class="room  col-start-18 col-end-23 row-start-1 row-end-4 pl-8 flex flex-wrap" id="securityroom">
-                    <button id="securityroombtn" class="absolute top-[32%] left-[86%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
+                    <button id="securityroombtn"
+                        class="absolute top-[32%] left-[86%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i
+                            class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
                 </div>
-                
-                <div class="room col-start-12 col-end-18 row-start-6 row-end-9  p-2.5 pl-8 flex flex-wrap" id="staffroom">
-                    <button id="staffroombtn" class="absolute top-[78%] left-[49.5%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
+
+                <div class="room col-start-12 col-end-18 row-start-6 row-end-9  p-2.5 pl-8 flex flex-wrap"
+                    id="staffroom">
+                    <button id="staffroombtn"
+                        class="absolute top-[78%] left-[49.5%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i
+                            class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
                 </div>
-                
-                
-                <div class="room col-start-18 col-end-23 row-start-6 row-end-9 p-2.5 pl-9 flex flex-wrap" id="serverroom">
-                    <button id="serverroombtn" class="absolute top-[78%] left-[77.5%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
+
+
+                <div class="room col-start-18 col-end-23 row-start-6 row-end-9 p-2.5 pl-9 flex flex-wrap"
+                    id="serverroom">
+                    <button id="serverroombtn"
+                        class="absolute top-[78%] left-[77.5%] sm:border-7 border-4 border-[#673b14] outline-[0.5px] outline-[#081E38]/15 sm:w-17 sm:h-17 w-10 h-10 rounded-[50%] transition-colors bg-[#C46021] hover:bg-[#D26D27] flex justify-center items-center"><i
+                            class="fa-solid fa-plus text-[15px] sm:text-[25px] text-white"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- assign an employee mmodal -->
-      <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(33,21,21,0.9)] z-999 hidden" id="assignemployee">
+    <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(33,21,21,0.9)] z-999 hidden" id="assignemployee">
         <div
             class="assignmodal pt-3 w-[90%] lg:w-[28%] h-[80vh] bg-[#F3E7C9] rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 flex flex-col">
             <div class="border-b border-gray-300 p-3 pl-0 relative">
                 <p class="text-xl">Assign Employee</p>
-                <i id="closeassingbtn" class="fa-solid fa-xmark absolute top-4 right-0.5 hover:scale-110 hover:text-red-400"></i>
+                <i id="closeassingbtn"
+                    class="fa-solid fa-xmark absolute top-4 right-0.5 hover:scale-110 hover:text-red-400"></i>
             </div>
             <div id="assingingemployees" class="flex flex-col p-4 h-fit overflow-y-scroll [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-400
             [&::-webkit-scrollbar-thumb]:rounded-full">
-                
-            
+
+
             </div>
         </div>
     </div>
@@ -191,10 +223,11 @@
     <div class="fixed top-0 left-0 w-screen h-screen bg-[rgba(20,20,20,0.90)] z-999 hidden" id="addemployeprofile">
         <div
             class="profilemodal w-[90%] lg:w-[45%] h-[95vh] bg-[#F3E7C9] rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 flex flex-col overflow-hidden">
-            
+
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
